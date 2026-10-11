@@ -1,0 +1,11 @@
+{
+  "name": "restaurante-del-parque",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && cp -r src dist && tailwindcss -i src/css/entrada.css -o dist/css/app.css --minify",
+    "dev": "npm run build && npx --yes serve dist",
+    "semilla": "node scripts/generar-semilla.mjs"
+  },
+  "devDependencies": { "tailwindcss": "3.4.17" }
+}

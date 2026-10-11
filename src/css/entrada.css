@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.glass-badge {
+            background: rgba(242, 237, 210, 0.85);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border: 1px solid rgba(172, 76, 0, 0.2);
+        }
+            .opt-on { background:#ac4c00 !important; border-color:#f2edd2 !important; box-shadow:0 0 0 1px rgba(242,237,210,.5),0 0 22px rgba(208,94,3,.65); }
+        .opt-on .opt-ic { background:#f2edd2 !important; color:#ac4c00 !important; }
+        .acc-body { display:grid; grid-template-rows:0fr; transition:grid-template-rows .3s ease; }
+        .acc-body.open { grid-template-rows:1fr; }
+        .acc-body > div { overflow:hidden; }
+        @media (prefers-reduced-motion: reduce){ .acc-body{transition:none} }
+            input { user-select:text; -webkit-user-select:text; font-size:16px; }
+        .type-btn { aspect-ratio:1; background:#f2edd2; border:6px solid #0a426d; border-radius:28px; box-shadow:inset 0 0 0 3px #f2edd2, inset 0 0 0 5px #052d4b, 0 10px 24px rgba(0,0,0,.45); transition:transform .2s, background .2s; }
+        .type-btn:active { transform:scale(.95); background:#fefae8; }
+        .type-btn i { color:#ac4c00; }
+        .moto { position:relative; display:inline-block; animation:ride .5s ease-in-out infinite alternate; }
+        .moto b { position:absolute; left:-14px; height:3px; border-radius:2px; background:#ac4c00; opacity:0; animation:wind .5s linear infinite; }
+        .moto b:nth-child(1){top:35%;width:12px} .moto b:nth-child(2){top:55%;width:16px;animation-delay:.15s} .moto b:nth-child(3){top:75%;width:10px;animation-delay:.3s}
+        @keyframes ride { from{transform:translateX(-2px)} to{transform:translateX(4px)} }
+        @keyframes wind { 0%{opacity:0;transform:translateX(8px)} 40%{opacity:.9} 100%{opacity:0;transform:translateX(-10px)} }
+        .spin-logo { display:inline-block; animation:spinY 2.4s linear infinite; will-change:transform; }
+        @keyframes spinY { to { transform:rotateY(360deg); } }
+        @media (prefers-reduced-motion: reduce){ .moto,.moto b{animation:none} }
+            body { min-height:100dvh; -webkit-tap-highlight-color:transparent; touch-action:manipulation; overscroll-behavior:none; }
+        .safe { padding:max(1.5rem,env(safe-area-inset-top)) max(1.5rem,env(safe-area-inset-right)) max(1.5rem,env(safe-area-inset-bottom)) max(1.5rem,env(safe-area-inset-left)); }
+        #menuOverlay, #flow { height:100dvh; overscroll-behavior:contain; }
