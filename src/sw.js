@@ -1,5 +1,5 @@
 // Subir VERSION cada vez que se publica algo: los celulares tiran la caché vieja.
-const VERSION = 'v1';
+const VERSION = 'v1.0.0.1';
 const CACHE = `rdp-${VERSION}`;
 
 self.addEventListener('install', e => {
