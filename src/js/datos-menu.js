@@ -1,3 +1,4 @@
+const P = (n, i, d, items, q) => ({ n, i, d, q: !!q, items: items.map(t => { const [a, b, c, d] = t.split('|'); return { n: a, p: +b, note: c || '', start: +d || 1 }; }) });
 const MENU = {
     cafeteria: { title: 'Cafetería & Desayunos', cats: [
         P('Cafetería','fa-mug-hot','Cafés y tés',['Café pocillo|2000','Café jarrito|2500','Café doble|2800','Café con leche|3000','Té|1500','Té digestivo|1600','Té con leche|2000','Capuccino|3500','Submarino|3500'],1),
@@ -20,3 +21,8 @@ const MENU = {
         P('Vinos y espumantes','fa-wine-glass','Botellas',['Alma Mora|13000','Las Perdices|15000','Nicassia|20000','Sidra 1888|15000'],1)
     ]}
 };
+const homeCards = [
+    ['cafeteria','fa-mug-hot','Cafetería & Desayunos','Cafés, tés, medialunas y tostadas'],
+    ['almuerzos','fa-utensils','Almuerzos','Entradas, platos, pizzas y postres'],
+    ['vinos','fa-wine-glass','Vinos & Espumantes','Vinos y sidra']
+];
